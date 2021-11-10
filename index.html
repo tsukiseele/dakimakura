@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<title>2way抱枕面料对比</title>
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"></link>
+		<link rel="stylesheet" href="./styles/index.css" />
+
+		<script src="//cdn.jsdelivr.net/npm/vue@3.2.21/dist/vue.global.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+      <div>阿斯顿萨达撒卡发士大夫附件是的咖啡</div>
+			<header id="header">2way抱枕面料对比</header>
+			<main id="main">
+        <div class="chart-wrap" v-for="(item, index) in fabricsData" :key="index">
+          <div class="chart">
+            <div class="fabrics-origin">{{item.origin}}</div>
+            <radar-chart :config="getConfig()" :data="item.datasets" />
+          </div>
+        </div>
+			</main>
+		</div>
+		<script src="./components/radar-chart.js"></script>
+		<script src="./components/app.js"></script>
+		<script src="./js/main.js"></script>
+		<script>
+			/**
+			 * S+: 100
+			 * S: 95
+			 * S-: 90
+			 * A+: 85
+			 * A: 80
+			 * A-:75
+			 * B+: 70
+			 * B: 65
+			 * B-: 60
+			 * C+: 55
+			 * C: 50
+			 * C-: 45
+			 * D+: 40
+			 * D: 35
+			 * D-: 30
+			 * E+: 20
+			 * E: 10
+			 * E-: 0
+			 **/
+		</script>
+	</body>
+</html>

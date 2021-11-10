@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  font-size: calc(1vw / 3 + 12px);
+}
+body {
+  background-color: rgba(244, 244, 244, 0.92);
+  display: flex;
+}
+#app {
+  margin: 0 auto;
+}
+#header {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2rem;
+  color: teal;
+  margin-top: 0.75rem;
+}
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+}
+.chart-wrap {
+  width: 25%;
+  padding: 0.5rem;
+}
+.chart {
+  position: relative;
+  padding: 0.33rem;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 8px 0 rgba(224, 224, 224, 0.33);
+  user-select: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.chart:hover {
+  box-shadow: 2px 2px 16px 2px rgba(192, 192, 192, 0.5);
+}
+.fabrics-origin {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0rem;
+  bottom: 0rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  background-color: #ddd;
+}
+@media screen and (max-width: 1280px) {
+  .chart-wrap {
+    width: calc(100% / 3);
+  }
+}
+@media screen and (max-width: 960px) {
+  .chart-wrap {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .chart-wrap {
+    width: 100%;
+  }
+}
