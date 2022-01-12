@@ -17,7 +17,13 @@
 
 <body>
   <div id="app">
-    <header id="header">2way抱枕面料数据可视化</header>
+    <header id="header">
+      <div class="header-title">2way抱枕面料数据可视化</div>
+      <div class="header-content">
+        因为不同批次可能存在一定的差异 <br />
+        数据仅供参考，请以实际感受为准
+      </div>
+    </header>
     <main id="main">
       <div class="chart-wrap" v-for="(item, index) in fabricsData" :key="index">
         <div class="chart">
@@ -25,7 +31,28 @@
           <radar-chart :config="getConfig()" :data="item.datasets" />
         </div>
       </div>
+      <table>
+        <tr>
+          <th>评级</th>
+          <th>分数</th>
+        </tr>
+        <tr v-for="(level, store) in scoreMap" :key="level">
+          <td>{{ level }}</td>
+          <td>{{ store }}</td>
+        </tr>
+      </table>
     </main>
+    <footer id="footer">
+      <div class="footer-content">
+        <a class="footer-label" href="//baozhen.site"><img
+            src="https://img.shields.io/badge/数据源-baozhen.site-217346?style=flat-square&logo=microsoft-excel&logoColor=white"
+            alt="加拿大鹅抱研" /></a>
+        <a class="footer-label" href="//github.com/tsukiseele"><img
+            src="https://img.shields.io/badge/开发者-TsukiSeele-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white"
+            alt="tsukiseele" /></a>
+      </div>
+      <img class="footer-statistics" src="https://count.getloli.com/get/@dakimakura?theme=rule34" alt="访问统计" />
+    </footer>
   </div>
   <script src="./components/radar-chart.js"></script>
   <script src="./components/app.js"></script>

@@ -10,15 +10,38 @@ body {
   background-color: rgba(244, 244, 244, 0.95);
   display: flex;
 }
+table {
+  border-collapse: collapse;
+}
+td {border: 1px solid teal;
+}
 #app {
   margin: 0 auto;
 }
-#header {
+#header .header-title {
+
   font-size: 1.5rem;
   text-align: center;
   line-height: 2rem;
   color: teal;
   margin-top: 0.75rem;
+}
+#header .header-content {
+  font-size: .8rem;
+  text-align: end;
+  color: grey;
+  margin: .25rem 0.75rem;
+}
+#footer {
+  text-align: center;
+  /* background-color: rgba(48,64,64,.67); */
+}
+#footer .footer-content {
+  padding: 1rem;
+}
+#footer .footer-label {
+  margin: .5rem;
+  transform: scale(1.2);
 }
 #main {
   display: flex;
