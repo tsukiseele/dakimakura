@@ -13,13 +13,17 @@ body {
 table {
   border-collapse: collapse;
 }
-td {border: 1px solid teal;
+tr {
+  color: dodgerblue;
+}
+td {
+  color: teal;
+  border: 1px solid teal;
 }
 #app {
   margin: 0 auto;
 }
 #header .header-title {
-
   font-size: 1.5rem;
   text-align: center;
   line-height: 2rem;
@@ -31,6 +35,30 @@ td {border: 1px solid teal;
   text-align: end;
   color: grey;
   margin: .25rem 0.75rem;
+}
+#header .header-details {
+  position: relative;
+  cursor: pointer;
+  color: dodgerblue;
+  font-size: 1.2rem;
+}
+#header .header-details .header-details--content {
+  position: absolute;
+  /* display: none; */
+  z-index: -99;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  background-color: white;
+  font-size: 1rem;
+  width: 5rem;
+  transition: .25s ease;
+  color: teal;
+}
+#header .header-details:hover .header-details--content {
+  /* display: table; */
+  z-index: 99;
+  opacity: 1;
 }
 #footer {
   text-align: center;

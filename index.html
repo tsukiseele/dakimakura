@@ -18,7 +18,21 @@
 <body>
   <div id="app">
     <header id="header">
-      <div class="header-title">2way抱枕面料数据可视化</div>
+      <div class="header-title">2way抱枕面料数据可视化<span class="header-details">（详情）
+          <div class="header-details--content">
+            <table>
+              <tr>
+                <th>评级</th>
+                <th>分数</th>
+              </tr>
+              <tr v-for="(level, store) in scoreMap" :key="level">
+                <td>{{ level }}</td>
+                <td>{{ store }}</td>
+              </tr>
+            </table>
+          </div>
+        </span>
+      </div>
       <div class="header-content">
         因为不同批次可能存在一定的差异 <br />
         数据仅供参考，请以实际感受为准
@@ -31,16 +45,6 @@
           <radar-chart :config="getConfig()" :data="item.datasets" />
         </div>
       </div>
-      <table>
-        <tr>
-          <th>评级</th>
-          <th>分数</th>
-        </tr>
-        <tr v-for="(level, store) in scoreMap" :key="level">
-          <td>{{ level }}</td>
-          <td>{{ store }}</td>
-        </tr>
-      </table>
     </main>
     <footer id="footer">
       <div class="footer-content">
