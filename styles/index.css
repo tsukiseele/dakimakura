@@ -39,9 +39,10 @@ td {
 }
 #header .header-details {
   position: relative;
-  cursor: pointer;
   color: dodgerblue;
   font-size: 1.2rem;
+  cursor: pointer;
+  user-select: none;
 }
 #header .header-details .header-details--content {
   position: absolute;
