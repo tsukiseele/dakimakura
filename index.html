@@ -25,7 +25,7 @@
                 <th>评级</th>
                 <th>分数</th>
               </tr>
-              <tr v-for="(level, store) in scoreMap" :key="level">
+              <tr v-for="(store, level) in scoreMap" :key="level">
                 <td>{{ level }}</td>
                 <td>{{ store }}</td>
               </tr>
